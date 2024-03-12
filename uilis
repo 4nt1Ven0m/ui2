@@ -1,0 +1,40 @@
+-- UI Library Script
+
+-- Create a module script to hold UI library functions
+local UI = {}
+
+-- Function to create a TextButton
+function UI.createButton(parent, name, text, position, size)
+    local button = Instance.new("TextButton")
+    button.Name = name
+    button.Text = text
+    button.Position = position
+    button.Size = size
+    button.Parent = parent
+    return button
+end
+
+-- Function to create a TextBox
+function UI.createTextBox(parent, name, text, position, size)
+    local textBox = Instance.new("TextBox")
+    textBox.Name = name
+    textBox.Text = text
+    textBox.Position = position
+    textBox.Size = size
+    textBox.Parent = parent
+    return textBox
+end
+
+-- Function to create a Frame
+function UI.createFrame(parent, name, position, size, color)
+    local frame = Instance.new("Frame")
+    frame.Name = name
+    frame.Position = position
+    frame.Size = size
+    frame.BackgroundColor3 = color
+    frame.Parent = parent
+    return frame
+end
+
+-- Return the UI module
+return UI
